@@ -78,12 +78,12 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuSkinNimbusActionPerformed"/>
                   </Events>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="menuSkinMetal">
+                <MenuItem class="javax.swing.JMenuItem" name="systemLAF">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&#x421;&#x43a;&#x438;&#x43d; Metal"/>
+                    <Property name="text" type="java.lang.String" value="&#x421;&#x43a;&#x438;&#x43d; &#x421;&#x438;&#x441;&#x442;&#x435;&#x43c;&#x44b;&#x43d;&#x439;"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuSkinMetalActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="systemLAFActionPerformed"/>
                   </Events>
                 </MenuItem>
               </SubComponents>
