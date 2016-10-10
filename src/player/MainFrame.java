@@ -54,8 +54,8 @@ public class MainFrame extends javax.swing.JFrame {
         menuExit = new javax.swing.JMenuItem();
         prefMenu = new javax.swing.JMenu();
         changeSkin = new javax.swing.JMenu();
-        menuSkin1 = new javax.swing.JMenuItem();
-        menuSkin2 = new javax.swing.JMenuItem();
+        menuSkinNimbus = new javax.swing.JMenuItem();
+        menuSkinMetal = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("JAVA music player");
@@ -252,6 +252,11 @@ public class MainFrame extends javax.swing.JFrame {
         menuSavePlayList.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
         menuSavePlayList.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/save.png"))); // NOI18N
         menuSavePlayList.setText("Сохранить плейлист");
+        menuSavePlayList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuSavePlayListActionPerformed(evt);
+            }
+        });
         fielMenu1.add(menuSavePlayList);
 
         menuExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/exit.png"))); // NOI18N
@@ -270,21 +275,21 @@ public class MainFrame extends javax.swing.JFrame {
         changeSkin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/service.png"))); // NOI18N
         changeSkin.setText("Внешний вид");
 
-        menuSkin1.setText("Скин1");
-        menuSkin1.addActionListener(new java.awt.event.ActionListener() {
+        menuSkinNimbus.setText("Скин Nimbus");
+        menuSkinNimbus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuSkin1ActionPerformed(evt);
+                menuSkinNimbusActionPerformed(evt);
             }
         });
-        changeSkin.add(menuSkin1);
+        changeSkin.add(menuSkinNimbus);
 
-        menuSkin2.setText("Скин2");
-        menuSkin2.addActionListener(new java.awt.event.ActionListener() {
+        menuSkinMetal.setText("Скин Metal");
+        menuSkinMetal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuSkin2ActionPerformed(evt);
+                menuSkinMetalActionPerformed(evt);
             }
         });
-        changeSkin.add(menuSkin2);
+        changeSkin.add(menuSkinMetal);
 
         prefMenu.add(changeSkin);
 
@@ -342,20 +347,25 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPauseActionPerformed
 
     private void menuOpenPlayListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuOpenPlayListActionPerformed
-        // TODO add your handling code here:
+        
+       
     }//GEN-LAST:event_menuOpenPlayListActionPerformed
 
-    private void menuSkin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSkin1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuSkin1ActionPerformed
+    private void menuSkinNimbusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSkinNimbusActionPerformed
+       SkinUtil.changeSkin(this,"javax.swing.plaf.nimbus.NimbusLookAndFeel");       
+    }//GEN-LAST:event_menuSkinNimbusActionPerformed
 
-    private void menuSkin2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSkin2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuSkin2ActionPerformed
+    private void menuSkinMetalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSkinMetalActionPerformed
+       SkinUtil.changeSkin(this,"javax.swing.plaf.metal.MetalLookAndFeel");
+    }//GEN-LAST:event_menuSkinMetalActionPerformed
 
     private void menuExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuExitActionPerformed
         System.exit(0);
     }//GEN-LAST:event_menuExitActionPerformed
+
+    private void menuSavePlayListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSavePlayListActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_menuSavePlayListActionPerformed
 
     /**
      * @param args the command line arguments
@@ -413,8 +423,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenuItem menuExit;
     private javax.swing.JMenuItem menuOpenPlayList;
     private javax.swing.JMenuItem menuSavePlayList;
-    private javax.swing.JMenuItem menuSkin1;
-    private javax.swing.JMenuItem menuSkin2;
+    private javax.swing.JMenuItem menuSkinMetal;
+    private javax.swing.JMenuItem menuSkinNimbus;
     private javax.swing.JPanel panelMain;
     private javax.swing.JPanel panelSearch;
     private javax.swing.JMenu prefMenu;
