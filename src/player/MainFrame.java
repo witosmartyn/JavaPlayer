@@ -254,9 +254,13 @@ public class MainFrame extends javax.swing.JFrame {
         menuSavePlayList.setText("Сохранить плейлист");
         fielMenu1.add(menuSavePlayList);
 
-        menuExit.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, 0));
         menuExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/exit.png"))); // NOI18N
         menuExit.setText("Выход");
+        menuExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuExitActionPerformed(evt);
+            }
+        });
         fielMenu1.add(menuExit);
 
         jMenuBar1.add(fielMenu1);
@@ -314,6 +318,7 @@ public class MainFrame extends javax.swing.JFrame {
         bindingGroup.bind();
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchActionPerformed
@@ -347,6 +352,10 @@ public class MainFrame extends javax.swing.JFrame {
     private void menuSkin2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSkin2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_menuSkin2ActionPerformed
+
+    private void menuExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuExitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_menuExitActionPerformed
 
     /**
      * @param args the command line arguments
